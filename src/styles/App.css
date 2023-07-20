@@ -1,0 +1,30 @@
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #454545;
+}
+
+.wrapper {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  color: #fff;
+}
+
+.picker-image {
+  padding: 10px;
+}
+
+.picker-image>img {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+}
