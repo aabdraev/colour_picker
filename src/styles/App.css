@@ -1,6 +1,6 @@
 .App {
   min-width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,17 +8,59 @@
 }
 
 .wrapper {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   padding: 20px;
   color: #fff;
 }
 
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+p {
+  text-align: left;
+  font-size: 18px;
+}
+
+input {
+  border: none;
+  border-radius: 10px;
+  background-color: #bdbdbd;
+  color: #000;
+  transition: 200ms;
+}
+
+input:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+  scale: 1.02
+}
+
+button {
+  width: 100%;
+  padding: 5px 0px;
+  border: none;
+  border-radius: 10px;
+  background-color: #bdbdbd;
+  color: #000;
+  transition: 200ms;
+}
+
+button:not(:disabled):hover {
+  cursor: pointer;
+  background-color: #fafafa;
+  scale: 1.02;
+}
+
+button:disabled {
+  cursor: default;
+}
+
 .picker-image {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
 }
 
@@ -26,5 +68,14 @@
   border-radius: 20px;
   width: 100%;
   height: auto;
-  max-width: 900px;
+  max-width: 700px;
+  box-shadow: 0px 15px 15px 5px #00000050;
+}
+
+.picker-select,
+.picker-form,
+.picker-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -1,18 +1,22 @@
+import { useEffect, useState } from 'react';
 import ColourPicker from './components/ColourPicker';
 import './styles/App.css';
 
 function App() {
-    // let warning = "Your browser does not support EyeDropper API"
+    const [isAccessible, setIsAccessible] = useState(false)
 
-    // const checkAPI = () => {
-    //     if ("EyeDropper" in window) {
-    //         return false
-    //     }
-    // }
+    useEffect(() => {
+        if ("EyeDropper" in window)
+            setIsAccessible(true)
+    }, [])
 
     return (
         <div className="App">
-            <ColourPicker />
+            {isAccessible
+                ?
+                <ColourPicker />
+                : <h1>Your browser does not support EyeDropper API</h1>
+            }
         </div>
     );
 }
